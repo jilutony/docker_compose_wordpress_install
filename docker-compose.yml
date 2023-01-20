@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    networks: 
+      - wpnetwork
+    volumes: 
+      - "mysqlvol:/var/lib/mysql"
+    environment:
+      MYSQL_ROOT_PASSWORD: MyR00tPa$$5w0rD
+      MYSQL_DATABASE: DatabaseName
+      MYSQL_USER: WordPressUser
+      MYSQL_PASSWORD: Passw0rD12
+    expose:
+      - 3306
+      - 33060
+
+  wordpress:
+    image: wordpress:latest
+    restart: always
+    networks: 
+      - wpnetwork
+    volumes:
+      - "myvol:/var/www/html"
+
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: WordPressUser
+      WORDPRESS_DB_PASSWORD: Passw0rD12
+      WORDPRESS_DB_NAME: DatabaseName
+    ports:
+      - "8000:80"
+networks:
+  wpnetwork:
+volumes:
+  mysqlvol:
+  myvol:
