@@ -14,6 +14,7 @@ Deploy with docker compose
   The expected result
   
   docker ps
+  
 CONTAINER ID   IMAGE              COMMAND                  CREATED          STATUS          PORTS                                   NAMES
 698ae48b2e14   mysql:5.7          "docker-entrypoint.s…"   37 minutes ago   Up 37 minutes   3306/tcp, 33060/tcp                     ec2-user_db_1
 d7257131447f   wordpress:latest   "docker-entrypoint.s…"   37 minutes ago   Up 37 minutes   0.0.0.0:8000->80/tcp, :::8000->80/tcp   ec2-user_wordpress_1
