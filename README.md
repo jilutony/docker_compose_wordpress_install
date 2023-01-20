@@ -11,7 +11,7 @@ Deploy with docker compose
   Creating ec2-user_wordpress_1 ... done
   Creating ec2-user_db_1        ... done
   
-  The expected result
+  The expected result,
   
 #docker ps
   
