@@ -1,7 +1,9 @@
 
 Deploy with docker compose
+
 #docker-compose up -d
-  '''
+
+  ```
   Creating network "ec2-user_wpnetwork" with the default driver
   Creating volume "ec2-user_mysqlvol" with default driver
   Creating volume "ec2-user_myvol" with default driver
@@ -10,7 +12,7 @@ Deploy with docker compose
   Status: Downloaded newer image for wordpress:latest
   Creating ec2-user_wordpress_1 ... done
   Creating ec2-user_db_1        ... done
-  '''
+  ```
   
   The expected result,
   
